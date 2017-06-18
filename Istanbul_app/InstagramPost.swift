@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class InstagramPost {
+    
+    var photo: String = ""
+    var likes: Int = 0
+    var title: String = ""
+}

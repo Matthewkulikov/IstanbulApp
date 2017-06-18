@@ -8,28 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
+    var posts: [InstagramPost] = []
+    
+    @IBOutlet weak var postsList: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getData()
 
+        postsList.dataSource = self
+        postsList.register(UINib(nibName: "InstagramViewCell", bundle: nil), forCellReuseIdentifier: "InstagramViewCell")
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: InstagramViewCell = postsList.dequeueReusableCell(withIdentifier: "InstagramViewCell") as! InstagramViewCell
+        return cell
     }
-    */
-
+    
+    func getData() {
+        
+    }
 }
