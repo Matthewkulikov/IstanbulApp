@@ -15,7 +15,31 @@
 		342D72D71EF67577009DB842 /* InstagramPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D72D61EF67577009DB842 /* InstagramPost.swift */; };
 		342D72DA1EF6788A009DB842 /* InstagramViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D72D81EF6788A009DB842 /* InstagramViewCell.swift */; };
 		342D72DB1EF6788A009DB842 /* InstagramViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342D72D91EF6788A009DB842 /* InstagramViewCell.xib */; };
+		342D72DE1EF6869C009DB842 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 342D72DD1EF6869C009DB842 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		342D72E01EF686BB009DB842 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 342D72DF1EF686BB009DB842 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		342D72E21EF686CF009DB842 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 342D72E11EF686CF009DB842 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		342D72E41EF686E4009DB842 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 342D72E31EF686E4009DB842 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		342D72E51EF68702009DB842 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72DD1EF6869C009DB842 /* Alamofire.framework */; };
+		342D72E61EF68712009DB842 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72DF1EF686BB009DB842 /* Realm.framework */; };
+		342D72E71EF6872A009DB842 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72E11EF686CF009DB842 /* RealmSwift.framework */; };
+		342D72E81EF6873B009DB842 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72E31EF686E4009DB842 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		342D72DC1EF68651009DB842 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				342D72E41EF686E4009DB842 /* SwiftyJSON.framework in CopyFiles */,
+				342D72E21EF686CF009DB842 /* RealmSwift.framework in CopyFiles */,
+				342D72E01EF686BB009DB842 /* Realm.framework in CopyFiles */,
+				342D72DE1EF6869C009DB842 /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		342D72BD1EF66E34009DB842 /* Istanbul_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Istanbul_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +52,10 @@
 		342D72D61EF67577009DB842 /* InstagramPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramPost.swift; sourceTree = "<group>"; };
 		342D72D81EF6788A009DB842 /* InstagramViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramViewCell.swift; sourceTree = "<group>"; };
 		342D72D91EF6788A009DB842 /* InstagramViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramViewCell.xib; sourceTree = "<group>"; };
+		342D72DD1EF6869C009DB842 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		342D72DF1EF686BB009DB842 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		342D72E11EF686CF009DB842 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		342D72E31EF686E4009DB842 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +63,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342D72E81EF6873B009DB842 /* SwiftyJSON.framework in Frameworks */,
+				342D72E71EF6872A009DB842 /* RealmSwift.framework in Frameworks */,
+				342D72E61EF68712009DB842 /* Realm.framework in Frameworks */,
+				342D72E51EF68702009DB842 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +76,10 @@
 		342D72B41EF66E34009DB842 = {
 			isa = PBXGroup;
 			children = (
+				342D72E31EF686E4009DB842 /* SwiftyJSON.framework */,
+				342D72E11EF686CF009DB842 /* RealmSwift.framework */,
+				342D72DF1EF686BB009DB842 /* Realm.framework */,
+				342D72DD1EF6869C009DB842 /* Alamofire.framework */,
 				342D72BF1EF66E34009DB842 /* Istanbul_app */,
 				342D72BE1EF66E34009DB842 /* Products */,
 			);
@@ -83,6 +119,7 @@
 				342D72B91EF66E34009DB842 /* Sources */,
 				342D72BA1EF66E34009DB842 /* Frameworks */,
 				342D72BB1EF66E34009DB842 /* Resources */,
+				342D72DC1EF68651009DB842 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -264,6 +301,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Istanbul_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Matthew.Istanbul-app";
@@ -276,6 +317,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Istanbul_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Matthew.Istanbul-app";
