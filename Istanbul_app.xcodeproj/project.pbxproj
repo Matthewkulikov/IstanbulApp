@@ -23,6 +23,9 @@
 		342D72E61EF68712009DB842 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72DF1EF686BB009DB842 /* Realm.framework */; };
 		342D72E71EF6872A009DB842 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72E11EF686CF009DB842 /* RealmSwift.framework */; };
 		342D72E81EF6873B009DB842 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72E31EF686E4009DB842 /* SwiftyJSON.framework */; };
+		342D72EA1EF6974A009DB842 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72E91EF69737009DB842 /* Kingfisher.framework */; };
+		342D72EB1EF69A00009DB842 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342D72E91EF69737009DB842 /* Kingfisher.framework */; };
+		342D72EC1EF69A00009DB842 /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 342D72E91EF69737009DB842 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				342D72EC1EF69A00009DB842 /* Kingfisher.framework in CopyFiles */,
 				342D72E41EF686E4009DB842 /* SwiftyJSON.framework in CopyFiles */,
 				342D72E21EF686CF009DB842 /* RealmSwift.framework in CopyFiles */,
 				342D72E01EF686BB009DB842 /* Realm.framework in CopyFiles */,
@@ -56,6 +60,7 @@
 		342D72DF1EF686BB009DB842 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		342D72E11EF686CF009DB842 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		342D72E31EF686E4009DB842 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		342D72E91EF69737009DB842 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342D72EA1EF6974A009DB842 /* Kingfisher.framework in Frameworks */,
 				342D72E81EF6873B009DB842 /* SwiftyJSON.framework in Frameworks */,
 				342D72E71EF6872A009DB842 /* RealmSwift.framework in Frameworks */,
 				342D72E61EF68712009DB842 /* Realm.framework in Frameworks */,
+				342D72EB1EF69A00009DB842 /* Kingfisher.framework in Frameworks */,
 				342D72E51EF68702009DB842 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +83,7 @@
 		342D72B41EF66E34009DB842 = {
 			isa = PBXGroup;
 			children = (
+				342D72E91EF69737009DB842 /* Kingfisher.framework */,
 				342D72E31EF686E4009DB842 /* SwiftyJSON.framework */,
 				342D72E11EF686CF009DB842 /* RealmSwift.framework */,
 				342D72DF1EF686BB009DB842 /* Realm.framework */,

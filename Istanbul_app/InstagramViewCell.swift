@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class InstagramViewCell: UITableViewCell {
 
@@ -17,6 +18,7 @@ class InstagramViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,6 +29,8 @@ class InstagramViewCell: UITableViewCell {
     
     func setup (post: InstagramPost) {
         postTitle.text = post.title
+        let url = URL(string: post.photo)
         postLikes.text = String(post.likes)
+        postImage.kf.setImage(with: url)
     }
 }

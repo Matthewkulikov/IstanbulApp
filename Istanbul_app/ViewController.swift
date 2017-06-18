@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                     let instagramPost = InstagramPost()
                     instagramPost.title = item["caption"]["text"].stringValue
                     instagramPost.likes = item["likes"]["count"].intValue
-                    instagramPost.photo = item["images"]["standard_resoldution"].stringValue
+                    instagramPost.photo = item["images"]["low_resolution"]["url"].stringValue
                     self.posts.append(instagramPost)
                 }
                 self.postsList.reloadData()
