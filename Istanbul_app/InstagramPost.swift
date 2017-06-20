@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
 
-class InstagramPost {
+class InstagramPost: Object {
     
-    var photo: String = ""
-    var likes: Int = 0
-    var title: String = ""
+    dynamic var photo: String = ""
+    dynamic var likes: Int = 0
+    dynamic var title: String = ""
 }

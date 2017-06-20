@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mainView = ViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window?.rootViewController = mainView
+        let navController = UINavigationController(rootViewController: mainView)
+        window?.rootViewController = navController
+        navController.navigationBar.barTintColor = UIColor(red: 160/255, green: 82/255, blue: 45/255, alpha: 1)
         window?.makeKeyAndVisible()
         return true
     }

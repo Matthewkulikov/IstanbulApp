@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 class ViewController: UIViewController, UITableViewDataSource {
 
@@ -18,12 +19,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
-
+        getdata()
         postsList.dataSource = self
         postsList.register(UINib(nibName: "InstagramViewCell", bundle: nil), forCellReuseIdentifier: "InstagramViewCell")
         postsList.rowHeight = UITableViewAutomaticDimension
         postsList.estimatedRowHeight = 140
+        self.navigationItem.title = "Istanbul"
         // Do any additional setup after loading the view.
     }
     
@@ -38,13 +39,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    func getData() {
+    func geNettData() {
         
         Alamofire.request("https://igapi.ga/istanbul_kem/media").responseJSON { response in
             
             if let data = response.data{
                 let json = JSON(data: data)
                 let responsArray = json["items"].arrayValue
+                self.posts = []
                 for item in responsArray{
                     let instagramPost = InstagramPost()
                     instagramPost.title = item["caption"]["text"].stringValue
@@ -52,8 +54,43 @@ class ViewController: UIViewController, UITableViewDataSource {
                     instagramPost.photo = item["images"]["low_resolution"]["url"].stringValue
                     self.posts.append(instagramPost)
                 }
+                self.deleteAll()
+                self.write(data: self.posts)
                 self.postsList.reloadData()
+            
             }
         }
     }
+    
+    func write(data: [InstagramPost]){
+        let realm = try! Realm()
+        for item in data {
+            try! realm.write {
+                realm.add(item)
+            }
+        }
+    }
+    func deleteAll(){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+    }
+    func getAll()->[InstagramPost]{
+        var result = [InstagramPost]()
+        let realm = try! Realm()
+        let items = realm.objects(InstagramPost.self)
+        for item in items {
+            
+            result.append(item)
+        }
+        return result
+    }
+    func getdata() {
+       let data = getAll()
+        self.posts = data
+        postsList.reloadData()
+        //geNettData()
+    }
+    
 }
