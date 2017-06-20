@@ -46,21 +46,20 @@ class ViewController: UIViewController, UITableViewDataSource {
             if let data = response.data{
                 let json = JSON(data: data)
                 let responsArray = json["items"].arrayValue
-                self.posts = []
-                for item in responsArray{
-                    let instagramPost = InstagramPost()
-                    instagramPost.title = item["caption"]["text"].stringValue
-                    instagramPost.likes = item["likes"]["count"].intValue
-                    instagramPost.photo = item["images"]["low_resolution"]["url"].stringValue
-                    self.posts.append(instagramPost)
-                }
+                if (responsArray.count > 0) {
+                    self.posts = []
+                    for item in responsArray{
+                        let instagramPost = InstagramPost()
+                        instagramPost.title = item["caption"]["text"].stringValue
+                        instagramPost.likes = item["likes"]["count"].intValue
+                        instagramPost.photo = item["images"]["low_resolution"]["url"].stringValue
+                        self.posts.append(instagramPost)
+                    }
                 
-                if(self.posts.count > 0) {
                     self.deleteAll()
                     self.write(data: self.posts)
                     self.postsList.reloadData()
                 }
-            
             }
         }
     }
@@ -93,7 +92,7 @@ class ViewController: UIViewController, UITableViewDataSource {
        let data = getAll()
         self.posts = data
         postsList.reloadData()
-        //getNetData()
+        getNetData()
     }
     
 }
