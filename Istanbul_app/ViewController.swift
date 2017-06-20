@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    func geNettData() {
+    func getNetData() {
         
         Alamofire.request("https://igapi.ga/istanbul_kem/media").responseJSON { response in
             
@@ -54,9 +54,12 @@ class ViewController: UIViewController, UITableViewDataSource {
                     instagramPost.photo = item["images"]["low_resolution"]["url"].stringValue
                     self.posts.append(instagramPost)
                 }
-                self.deleteAll()
-                self.write(data: self.posts)
-                self.postsList.reloadData()
+                
+                if(self.posts.count > 0) {
+                    self.deleteAll()
+                    self.write(data: self.posts)
+                    self.postsList.reloadData()
+                }
             
             }
         }
@@ -90,7 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource {
        let data = getAll()
         self.posts = data
         postsList.reloadData()
-        //geNettData()
+        //getNetData()
     }
     
 }
